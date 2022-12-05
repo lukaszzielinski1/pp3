@@ -1,60 +1,52 @@
-class Computer{
-    private String system;
-    private boolean isOn;
+public class Computer{
+    private String operatingSystemType;
     private String caseColor;
-    private Processor processor;
-
-    public Computer(String system, boolean isOn, String caseColor, Processor processor){
-        this.system = system;
-        this.isOn = isOn;
-        this.caseColor = caseColor;
-        this.processor = new Processor("Intel", 30.1, 10);
-    }
+    private boolean isON;
+    private Processor processor = new Processor();
     
-    public String getCaseColor() {
-        return caseColor;
-    }
-    public String getSystem() {
-        return system;
-    }
-    public boolean getIsOn(){
-        return isOn;
-    }
-    public String getCPU() {
-        return processor;
-    }
-
-    public void setCaseColor(String caseColor) {
-        this.caseColor = caseColor;
-    }
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
-    }
-    public void setSystem(String system) {
-        this.system = system;
-    }
-    public void setCPU(String cPU) {
+    
+    public Computer(String caseColor, boolean isON, String operatingSystemType, Processor processor){
+        setCaseColor(caseColor);
+        setON(isON);
+        setOperatingSystemType(operatingSystemType);
         this.processor = processor;
     }
 
-    public void turnOn(){
-        this.isOn = true;
+
+    public String getOperatingSystemType() {
+        return operatingSystemType;
     }
+    public String getCaseColor() {
+        return caseColor;
+    }
+    public boolean isON() {
+        return isON;
+    }
+    public void setOperatingSystemType(String operatingSystemType) {
+        this.operatingSystemType = operatingSystemType;
+    }
+    public void setCaseColor(String caseColor) {
+        this.caseColor = caseColor;
+    }
+    public void setON(boolean isON) {
+        this.isON = isON;
+    }
+
+    public void turnON(){
+        setON(true);
+    }
+
     public void turnOff(){
-        this.isOn = false;
+        setON(false);
     }
+
     public String toString(){
-        return "System: " + this.system + " ON: " + this.isOn;
+        return "Operating system: " + operatingSystemType + "\n" + processor;
     }
-    
-}
 
-
-class Main{
-    public static void main(String[] args) {
-        Computer c = new Computer("Windows", true, "Blue");
-        Processor p = new Processor();
-
-        }
+    public static void main(String[] args){
+        Computer c1 = new Computer(null, false, "Windows", new Processor("bruh", 3.5, 3, "1511"));
+        System.out.println(c1);
     }
+
 }

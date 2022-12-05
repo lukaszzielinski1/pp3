@@ -1,26 +1,33 @@
-class Processor{
+public class Processor{
+    
     private String name;
     private double timing;
     private int coreNumber;
-
+    private String socket;
     
-    public Processor(String name, double timing, int coreNumber) {
-        this.name = name;
-        this.timing = timing;
-        this.coreNumber = coreNumber;
+    
+    
+    Processor(String name, double timing, int coreNumber, String socket) {
+        setName(name);
+        setTiming(timing);
+        setCoreNumber(coreNumber);
+        setSocket(socket);
+    }
+    
+    Processor() {
     }
 
-    public int getCoreNumber() {
-        return coreNumber;
-    }
     public String getName() {
         return name;
     }
     public double getTiming() {
         return timing;
     }
-    public void setCoreNumber(int coreNumber) {
-        this.coreNumber = coreNumber;
+    public int getCoreNumber() {
+        return coreNumber;
+    }
+    public String getSocket() {
+        return socket;
     }
     public void setName(String name) {
         this.name = name;
@@ -28,9 +35,15 @@ class Processor{
     public void setTiming(double timing) {
         this.timing = timing;
     }
-
-    public int sum(int a, int b){
-        return a + b;
+    public void setCoreNumber(int coreNumber) {
+        this.coreNumber = coreNumber;
     }
-
+    public void setSocket(String socket) {
+        this.socket = socket;
+    }
+    
+    public String toString(){
+        return "Name: " + getName() + "\n" + "Timing: " + getTiming() + "\n" + "Core number: " + getCoreNumber() + "\n"
+        + "Socket: " + getSocket();
+    }
 }
