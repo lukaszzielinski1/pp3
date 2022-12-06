@@ -25,6 +25,9 @@ public class Folder {
         files.add(file);
     }
     
+    void removeFile(int index){
+        files.remove(index);
+    }
 
     public String toString() {
         return "Folder name: " + this.name + "\n" + "Number of files: " + files.size() + "\n" + "Files: " + files.toString() + "\n";
@@ -36,6 +39,8 @@ public class Folder {
         f.addFile(new File("Fortnite.exe", 1000));
         System.out.println(f);
         f.addFile(new File("Sysy vs Oldman 2: powrót Czumpiego.mp4", 12450));
+        System.out.println(f);
+        f.removeFile(1);
         System.out.println(f);
     }
 }

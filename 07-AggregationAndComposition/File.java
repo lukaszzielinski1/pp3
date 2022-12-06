@@ -6,8 +6,6 @@ public class File {
         this.name = name;
         this.fileSize = fileSize;
     }
-    File(){
-    }
     
     
     public String getName() {
