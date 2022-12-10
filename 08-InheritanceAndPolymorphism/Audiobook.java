@@ -15,8 +15,8 @@ public class Audiobook extends Book {
         this.seconds = seconds;
     }
 
-    void display(){
-        System.out.println("Author: " + this.author + ", Title: " + this.title + ", Time: " + minutes + ":" + seconds);
+    public String toString(){
+        return("Author: " + this.author + ", Title: " + this.title + ", Time: " + minutes + ":" + seconds);
     }
 
 }

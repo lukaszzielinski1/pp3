@@ -14,8 +14,8 @@ public class Book {
         this.author = author;
     }
     
-    void display(){
-        System.out.println("Author: " + this.author + ", Title: " + this.title);
+    public String toString(){
+        return "Author: " + this.author + ", Title: " + this.title;
     }
     
 }

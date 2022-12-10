@@ -9,4 +9,8 @@ public class Ebook extends Book {
         super(author,title);
         this.fileName = fileName;
     }
+
+    public String toString(){
+        return "Author: " + this.author + ", Title: " + this.title + ", File name: " + this.fileName;
+    }
 }
