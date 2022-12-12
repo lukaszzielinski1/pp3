@@ -2,7 +2,7 @@ public class Computer{
     private String operatingSystemType;
     private String caseColor;
     private boolean isON;
-    private Processor processor = new Processor();
+    private Processor processor;
     
     
     public Computer(String caseColor, boolean isON, String operatingSystemType, Processor processor){

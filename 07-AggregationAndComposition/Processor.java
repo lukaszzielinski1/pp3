@@ -13,9 +13,6 @@ public class Processor{
         setCoreNumber(coreNumber);
         setSocket(socket);
     }
-    
-    Processor() {
-    }
 
     public String getName() {
         return name;
